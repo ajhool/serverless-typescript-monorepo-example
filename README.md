@@ -13,9 +13,11 @@ An example repo for managing several lambda/serverless typescript functions in a
  [ ] Provide a Serverless example as well as AWS specific templates.
  
  [ ] Webpack or similar bundler for tree-shaking and minified deployment package
+ 
+ [ ] Incremental / cached build. Only build the packages that have changed since the last build. Note: this doesn't currently include incremental packaging, which might be doable but is not currently supported.
 
 ## Non-goals
  - Not a generator
  - Does not detect the status of deployed functions relative to local code. This would be nice to have, though...
- - Incremental and build-only-if-needed builds. If typescript + webpack do incremental builds under the hood, then we benefit from that, but this example does not provide an additional cacheing/incremental build layer on top of that. Typescript does do incremental builds, not sure about webpack.
+ - Incremental packaging.
  
